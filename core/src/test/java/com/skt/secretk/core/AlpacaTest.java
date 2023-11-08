@@ -12,8 +12,11 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import org.junit.jupiter.api.Test;
+import org.springframework.http.HttpCookie;
 import org.springframework.http.MediaType;
 import org.springframework.http.client.reactive.ReactorClientHttpConnector;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MultiValueMap;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
@@ -28,18 +31,23 @@ public class AlpacaTest {
         webClient = createWebClient();
 
         String inputMessage = "점심 메뉴 추천해줘";
-        String conversationId = getConversation();
-        System.out.println("conversationId : " + conversationId);
+        KoAlpacaConversationResponse conversationResult = getConversation();
+        System.out.println("conversationId : " + conversationResult.getConversationId());
 
-        execute(conversationId, inputMessage);
+        execute(conversationResult, inputMessage);
     }
 
-    private void execute(String conversationId, String question) {
+    private void execute(KoAlpacaConversationResponse conversationResult, String question) {
+
+        MultiValueMap<String, String> cookieMap = new LinkedMultiValueMap<String, String>();
+        cookieMap.add("hf-chat", conversationResult.getCookie());
+
         KoAlpacaResponse response = webClient.post()
-                                             .uri(CONVERSATION_URL + "/" + conversationId)
+                                             .uri(CONVERSATION_URL + "/" + conversationResult.getConversationId())
+                                             .cookie("hf-chat", conversationResult.getCookie())
                                              .header("Origin", "https://chat.koalpaca.com")
-                                             .header("Referer", CONVERSATION_URL + "/" + conversationId)
-                                             .accept(MediaType.APPLICATION_STREAM_JSON)
+                                             .header("Referer", CONVERSATION_URL + "/" + conversationResult.getConversationId())
+                                             .accept(MediaType.TEXT_EVENT_STREAM)
                                              .contentType(MediaType.APPLICATION_JSON)
                                              .body(
                                                  Mono.just(KoAlpacaRequest.defaultKoAlpacaRequest(question)), KoAlpacaRequest.class)
@@ -73,15 +81,32 @@ public class AlpacaTest {
                         .build();
     }
 
-    private String getConversation() {
-        ConversationResponse response = webClient.post()
-                                                 .uri(CONVERSATION_URL)
-                                                 .contentType(MediaType.APPLICATION_JSON)
-                                                 .retrieve()
-                                                 .bodyToMono(ConversationResponse.class)
-                                                 .block();
+    private KoAlpacaConversationResponse getConversation() {
+        return webClient.post()
+                        .uri(CONVERSATION_URL)
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .exchangeToMono(response -> {
+                            String cookie = Optional.ofNullable(
+                                response.cookies().getFirst("hf-chat"))
+                                                    .map(HttpCookie::getValue)
+                                                    .orElse("");
 
-        return response.conversationId;
+                             return response.bodyToMono(ConversationResponse.class)
+                                            .map(conversationResponse -> {
+                                                return new KoAlpacaConversationResponse(cookie, conversationResponse.getConversationId());
+                                            })
+                                            .onErrorResume(t -> Mono.empty());
+                         })
+                         .block();
+    }
+
+    @Getter
+    @AllArgsConstructor
+    @RequiredArgsConstructor
+    private static class KoAlpacaConversationResponse {
+        private String cookie;
+        private String conversationId;
+
     }
 
     @Getter
