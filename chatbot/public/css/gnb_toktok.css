@@ -1,0 +1,25 @@
+@charset "UTF-8";
+.main .sk_tok_gnb {
+  width: 100%;
+  max-width: 1880px; }
+
+.gwp_gnb_wrap {
+  display: block; }
+
+.gwp_gnb_relative#gwpGnb {
+  padding: 0; }
+
+.gwp_gnb_relative#gwpGnb #gwp_nav_toktok {
+  right: auto; }
+
+/* toktok GNB 높이 줄임 */
+#gwpGnb #gwp_quickmenu {
+  display: none; }
+
+#gwpGnb .gwp_gnb_header {
+  height: 0; }
+
+#gwpGnb.gwp_gnb_relative {
+  height: 50px !important; }
+  #gwpGnb.gwp_gnb_relative .gwp_logo {
+    top: 12px; }
