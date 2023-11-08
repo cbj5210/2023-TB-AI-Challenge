@@ -1,0 +1,184 @@
+
+* {
+}
+
+/*=====================================================*/
+/*LNB 覃��� . �启���碁Μ����*/
+/*=====================================================*/
+
+#lay_lnb .lnb_menu .lnb_item .treemenu_body {
+    /* background-color: #eee; */
+    background-color: #fff;
+}
+
+/*////////////////////////////////////////////////////*/
+
+
+/*=====================================================*/
+/*LNB 覃��� . �启���碁Μ����*/
+/*=====================================================*/
+
+#FolderManagers .target_item:hover {
+    background-color: #ccc;
+}
+
+#FolderManagers .target_item.active {
+    background-color: #ccc;
+}
+
+/*////////////////////////////////////////////////////*/
+
+
+
+/*=====================================================*/
+/*���渚��覃� . 螳��ｸ���� ���� 襷�讌�*/
+/*=====================================================*/
+
+.simplersvr_contents {
+    margin: 20px;
+}
+
+/*////////////////////////////////////////////////////*/
+
+
+/*=====================================================*/
+/*�������� �������企�*/
+/*=====================================================*/
+
+.reservation .legend {
+    margin: 0px;
+}
+
+.reservation .timetable_table .resv_name {
+    width: 200px !important;
+}
+
+.reservation .timetable_table tbody {
+    border: none !important;
+}
+
+.reservation .timetable_table .resv_border {
+    background-color: #5d5a5a !important;
+    height: 1px;
+    font-size: 1px;
+    line-height: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.reservation .timetable_table TD.reserved {
+    background-color: transparent !important;
+    cursor: pointer;
+}
+
+.reservation .timetable_table .reserved-item {
+    top: 1px !important;
+    left: 1px !important;
+    width: calc(100% - 4px);
+    height: 18px;
+    padding-top: 3px;
+    border: 1px solid #555 !important;
+    background-color: #ff794e !important;
+    /*elpsis 豌�襴�*/
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    max-width: 100%;
+    /*elipsis 豌�襴� - ��*/
+}
+
+/*////////////////////////////////////////////////////*/
+
+
+/*=====================================================*/
+/*�危�� 豌�襴�*/
+/*=====================================================*/
+
+.ui-helper-hidden-accessible {
+    display: none !important;
+}
+
+/*.ui-tooltip {
+    padding: 8px;
+    position: absolute;
+    z-index: 9999;
+    max-width: 350px;
+    box-shadow: none !important;
+}
+
+    .ui-tooltip .tooltip-box {
+        border: 1px solid #ccc;
+        background-color: #fff;
+    }
+
+        .ui-tooltip .tooltip-box .tooltip-title {
+            font-size: 14px;
+            line-height: 1.4;
+            color: #fff;
+            font-weight: bold;
+            display: block;
+            padding: 10px;
+            background: #2d2f40;
+        }
+
+        .ui-tooltip .tooltip-box .tooltip-items {
+            padding: 8px 15px 15px;
+            margin: 0;
+            list-style: none;
+        }
+
+            .ui-tooltip .tooltip-box .tooltip-items .tooltip-item {
+                font-size: 13px;
+                line-height: 1.33;
+                color: #222;
+                position: relative;
+                padding-left: 60px;
+                margin: 4px 0;
+                list-style: none;
+            }
+
+                .ui-tooltip .tooltip-box .tooltip-items .tooltip-item.data-only {
+                    padding-left: 0px;
+                }
+
+                .ui-tooltip .tooltip-box .tooltip-items .tooltip-item em {
+                    font-weight: bold;
+                    font-style: normal;
+                    position: absolute;
+                    left: 0px;
+                    top: 0px;
+                    display: inline-block;
+                    width: 60px;
+                }
+
+                .ui-tooltip .tooltip-box .tooltip-items .tooltip-item.data-only hr {
+                    display: block;
+                    height: 1px;
+                    border: 0;
+                    border-top: 1px solid #2d2f40;
+                    margin: 5px 0px;
+                    padding: 0px;
+                }*/
+
+/*////////////////////////////////////////////////////*/
+
+
+/*=====================================================*/
+/*覃��� �る� banner.css�� ��豌企�����給���� 2018-07 SYKim*/
+/*=====================================================*/
+
+/*
+.menu_desc_box {
+    width: calc(100% - 20px) !important;
+    padding: 10px 10px !important;
+    background-color: #fbe3b7 !important;
+    background-color: #f7f5f1 !important;
+    border: none !important;
+    font-size: 1.2em !important;
+    margin: 0px !important;
+}*/
+
+/*////////////////////////////////////////////////////*/
