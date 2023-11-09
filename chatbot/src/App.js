@@ -34,6 +34,12 @@ function App() {
     })
   }, []);
 
+  const handleEnterSubmit = (e) => {
+    if (e.key === 'Enter') {
+      return handleSubmit();
+    }
+  }
+
   const handleSubmit = async () => {
 
     if (input !== '') {
@@ -103,7 +109,7 @@ function App() {
           defaultValue=""
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          onPressEnter={handleSubmit}
+          onKeyDown={handleEnterSubmit}
           placeholder="요청을 입력해주세요."
         />
         <Button type="primary" onClick={handleSubmit}>
