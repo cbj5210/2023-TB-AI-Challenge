@@ -36,7 +36,7 @@ public class CryptoUtils {
 
     public static PrivateKey getPrivateKey() {
         try {
-            File file = new File("/home/service/private.pem");
+            File file = new File("/home/service/pem/private.pem");
             byte[] bytes = Files.readAllBytes(file.toPath());
             PKCS8EncodedKeySpec spec = new PKCS8EncodedKeySpec(bytes);
             KeyFactory keyFactory = KeyFactory.getInstance(RSA);
