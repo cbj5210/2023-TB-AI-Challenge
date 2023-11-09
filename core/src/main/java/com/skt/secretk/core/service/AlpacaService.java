@@ -38,6 +38,10 @@ public class AlpacaService {
                         .contentType(MediaType.APPLICATION_JSON)
                         .exchangeToMono(response -> response.bodyToMono(KoAlpacaConvResponse.class)
                                                             .map(it -> it.withCookieValue(cookieValue(response.cookies()))))
+                        .onErrorResume(e -> {
+                            log.error("koAlpaca error.", e);
+                            return Mono.just(new KoAlpacaConvResponse());
+                        })
                         .block();
     }
 

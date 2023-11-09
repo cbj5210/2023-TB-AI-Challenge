@@ -3,6 +3,8 @@ package com.skt.secretk.core.service;
 import com.skt.secretk.core.model.GoogleNlpRequest;
 import com.skt.secretk.core.model.GoogleNlpResponse;
 import com.skt.secretk.core.model.GoogleNlpResponse.Entity;
+import com.skt.secretk.core.properties.KeyProperties;
+import com.skt.secretk.core.util.CryptoUtils;
 import com.skt.secretk.core.util.StreamUtils;
 import java.io.File;
 import java.util.ArrayList;
@@ -24,12 +26,15 @@ public class GcpNlpService {
 
     private final WebClient webClient;
 
+    private final KeyProperties keyProperties;
+
     public List<String> query(String message) {
 
         try {
             File file = ResourceUtils.getFile("classpath:googleNlpApiKey.txt");
             Scanner scanner = new Scanner(file);
-            String apiKey = scanner.nextLine();
+            String encryptedApiKey = scanner.nextLine();
+            String apiKey = CryptoUtils.decrypt(encryptedApiKey, keyProperties.getCommonKey());
             scanner.close();
 
             // google api call
