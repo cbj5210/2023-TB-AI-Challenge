@@ -8,352 +8,1061 @@ SK group portal GNB
 As-Is GNB CSS 무효화
 ================================================*/
 #gnb_box {
-	height:110px !important;
-	background:none #FFF !important;
+  height: 110px !important;
+  background: none #fff !important;
 }
 #gnb {
-	width:auto !important;
-	overflow:visible !important;
-	margin:0 !important;
-	height:auto !important;
-	vertical-align:top;
-	text-align:left !important;
-	padding:0 !important;
+  width: auto !important;
+  overflow: visible !important;
+  margin: 0 !important;
+  height: auto !important;
+  vertical-align: top;
+  text-align: left !important;
+  padding: 0 !important;
 }
 /* 서브 및 검색페이지 */
 .m_board_width_100per #content,
-.board_width_100per #content {padding-left:80px !important}
+.board_width_100per #content {
+  padding-left: 80px !important;
+}
 .m_board_width_100per #sidecontent,
-.board_width_100per #sidecontent {padding-left:0}
+.board_width_100per #sidecontent {
+  padding-left: 0;
+}
 .m_board_width_100per #sidecontent #lnb,
-.board_width_100per #sidecontent #lnb {margin-left:-5px !important}
+.board_width_100per #sidecontent #lnb {
+  margin-left: -5px !important;
+}
 .m_board_width_100per #sidemenu,
-.board_width_100per #sidemenu {display:none !important}
+.board_width_100per #sidemenu {
+  display: none !important;
+}
 /* 서브페이지 좌측 배너 여백 */
 .m_board_width_100per #sidecontent .section,
-.board_width_100per #sidecontent .section {padding-left:0}
+.board_width_100per #sidecontent .section {
+  padding-left: 0;
+}
 .m_board_width_100per #sidecontent .banner,
-.board_width_100per #sidecontent .banner {padding-left:0}
+.board_width_100per #sidecontent .banner {
+  padding-left: 0;
+}
 
 /* Contents - as-is main */
-#maincontent .layoutRow {margin-left:-40px}
+#maincontent .layoutRow {
+  margin-left: -40px;
+}
 /* Contents - tiktok */
-#maincontent .twit {margin-left:-80px !important; width:980px !important}
-#maincontent .twit .twit_line_y {background-position:54px top !important}
-#maincontent .twit_line_y .pd2 {width:90px !important}
-#maincontent .twit_headcenter {padding-left:55px !important}
-
-
+#maincontent .twit {
+  margin-left: -80px !important;
+  width: 980px !important;
+}
+#maincontent .twit .twit_line_y {
+  background-position: 54px top !important;
+}
+#maincontent .twit_line_y .pd2 {
+  width: 90px !important;
+}
+#maincontent .twit_headcenter {
+  padding-left: 55px !important;
+}
 
 /*================================================
 ================================================*/
 /* 2022-09-14 gnb feed toast가 toktok gnb에 가려지는 현상이 있어서 z-index:50을 제거함 */
-#gwpGnb {position:relative; height:110px; /*z-index:50*/}
-#gwpGnb .gwp_gnb_wrap {width:1150px; margin:0 auto}
-#gwpGnb table {border-collapse:collapse}
-#gwpGnb td {padding:0}
-
+#gwpGnb {
+  position: relative;
+  height: 110px; /*z-index:50*/
+}
+#gwpGnb .gwp_gnb_wrap {
+  width: 1150px;
+  margin: 0 auto;
+}
+#gwpGnb table {
+  border-collapse: collapse;
+}
+#gwpGnb td {
+  padding: 0;
+}
 
 /*================================================
 GNB Base
 ================================================*/
-#gwpGnb {font-size:12px; line-height:18px; color:#494856; font-family:'Malgun Gothic', Gulim, Dotum, verdana, tahoma, arial; min-width:980px}
-#gwpGnb.en {font-family:arial, verdana, tahoma, 'Malgun Gothic', Gulim, Dotum}
-#gwpGnb.zh {font-family:Arial,"宋体", 'Malgun Gothic'}
+#gwpGnb {
+  font-size: 12px;
+  line-height: 18px;
+  color: #494856;
+  font-family: "Malgun Gothic", Gulim, Dotum, verdana, tahoma, arial;
+  min-width: 980px;
+}
+#gwpGnb.en {
+  font-family: arial, verdana, tahoma, "Malgun Gothic", Gulim, Dotum;
+}
+#gwpGnb.zh {
+  font-family: Arial, "宋体", "Malgun Gothic";
+}
 #gwpGnb a,
-#gwpGnb input {font-size:12px; line-height:18px; color:#494856; font-family:'Malgun Gothic', Gulim, Dotum, verdana, tahoma, arial}
+#gwpGnb input {
+  font-size: 12px;
+  line-height: 18px;
+  color: #494856;
+  font-family: "Malgun Gothic", Gulim, Dotum, verdana, tahoma, arial;
+}
 #gwpGnb.en a,
-#gwpGnb.en input {font-family:arial, verdana, tahoma, 'Malgun Gothic', Gulim, Dotum}
+#gwpGnb.en input {
+  font-family: arial, verdana, tahoma, "Malgun Gothic", Gulim, Dotum;
+}
 #gwpGnb.zh a,
-#gwpGnb.zh input {font-family:Arial,"宋体", 'Malgun Gothic'}
+#gwpGnb.zh input {
+  font-family: Arial, "宋体", "Malgun Gothic";
+}
 #gwpGnb ul,
-#gwpGnb ol {margin:0; list-style:none; padding-left:0}
-#gwpGnb p {margin:0}
-#gwpGnb a img {border-width:0}
-#gwpGnb .gwp_gnb_fix {margin:0 auto}
-#gwpGnb .gwp_gnb_fix {margin:0 auto}
-
+#gwpGnb ol {
+  margin: 0;
+  list-style: none;
+  padding-left: 0;
+}
+#gwpGnb p {
+  margin: 0;
+}
+#gwpGnb a img {
+  border-width: 0;
+}
+#gwpGnb .gwp_gnb_fix {
+  margin: 0 auto;
+}
+#gwpGnb .gwp_gnb_fix {
+  margin: 0 auto;
+}
 
 /*================================================
 GNB 헤더
 ================================================*/
-#gwpGnb .gwp_gnb_header {height:32px}
-#gwpGnb .gwp_gnb_header_left {float:left}
-#gwpGnb .gwp_gnb_header_right {float:right; padding-top:6px}
-
+#gwpGnb .gwp_gnb_header {
+  height: 32px;
+}
+#gwpGnb .gwp_gnb_header_left {
+  float: left;
+}
+#gwpGnb .gwp_gnb_header_right {
+  float: right;
+  padding-top: 6px;
+}
 
 /*================================================
 Quick menu
 ================================================*/
-#gwpGnb #gwp_quickmenu {float:left; margin-right:10px; padding-top:3px; margin-top:4px; height:13px}
-#gwpGnb #gwp_quickmenu li {line-height:16px; float:left; margin-right:9px; margin-left:3px}
-#gwpGnb #gwp_quickmenu a {text-indent:-1000px; display:block; cursor:pointer; width:12px; height:12px; overflow:hidden; background-image:url(/Portal/CustomExtension/GroupPortal/Resources/images/img_gnb.png)}
-.gwp_ie6#gwpGnb #gwp_quickmenu a {background-image:url(/Portal/CustomExtension/GroupPortal/Resources/images/img_gnb_ie6.jpg)}
+#gwpGnb #gwp_quickmenu {
+  float: left;
+  margin-right: 10px;
+  padding-top: 3px;
+  margin-top: 4px;
+  height: 13px;
+}
+#gwpGnb #gwp_quickmenu li {
+  line-height: 16px;
+  float: left;
+  margin-right: 9px;
+  margin-left: 3px;
+}
+#gwpGnb #gwp_quickmenu a {
+  text-indent: -1000px;
+  display: block;
+  cursor: pointer;
+  width: 12px;
+  height: 12px;
+  overflow: hidden;
+  background-image: url(../images/gnb/img_gnb.png);
+}
+.gwp_ie6#gwpGnb #gwp_quickmenu a {
+  background-image: url(/Portal/CustomExtension/GroupPortal/Resources/images/img_gnb_ie6.jpg);
+}
 /* Quick menu Button */
-#gwpGnb #gwp_quickmenu .gwp_mail a {background-position:0 -50px}
-#gwpGnb #gwp_quickmenu .gwp_messenger a {background-position:-30px -50px}
-#gwpGnb #gwp_quickmenu .gwp_yellowpage a {background-position:-60px -50px}
-#gwpGnb #gwp_quickmenu .gwp_authentication a {background-position:-90px -50px}
-#gwpGnb #gwp_quickmenu .gwp_mobile a {background-position:-120px -50px}
-#gwpGnb #gwp_quickmenu .gwp_yellowpage2 a {background-position:-150px -50px}
+#gwpGnb #gwp_quickmenu .gwp_mail a {
+  background-position: 0 -50px;
+}
+#gwpGnb #gwp_quickmenu .gwp_messenger a {
+  background-position: -30px -50px;
+}
+#gwpGnb #gwp_quickmenu .gwp_yellowpage a {
+  background-position: -60px -50px;
+}
+#gwpGnb #gwp_quickmenu .gwp_authentication a {
+  background-position: -90px -50px;
+}
+#gwpGnb #gwp_quickmenu .gwp_mobile a {
+  background-position: -120px -50px;
+}
+#gwpGnb #gwp_quickmenu .gwp_yellowpage2 a {
+  background-position: -150px -50px;
+}
 
-#gwpGnb #gwp_quickmenu .gwp_mail a:hover {background-position:-180px -50px}
-#gwpGnb #gwp_quickmenu .gwp_messenger a:hover {background-position:-210px -50px}
-#gwpGnb #gwp_quickmenu .gwp_yellowpage a:hover {background-position:-240px -50px}
-#gwpGnb #gwp_quickmenu .gwp_authentication a:hover {background-position:-270px -50px}
-#gwpGnb #gwp_quickmenu .gwp_mobile a:hover {background-position:-300px -50px}
-#gwpGnb #gwp_quickmenu .gwp_yellowpage2 a:hover {background-position:-330px -50px}
-
+#gwpGnb #gwp_quickmenu .gwp_mail a:hover {
+  background-position: -180px -50px;
+}
+#gwpGnb #gwp_quickmenu .gwp_messenger a:hover {
+  background-position: -210px -50px;
+}
+#gwpGnb #gwp_quickmenu .gwp_yellowpage a:hover {
+  background-position: -240px -50px;
+}
+#gwpGnb #gwp_quickmenu .gwp_authentication a:hover {
+  background-position: -270px -50px;
+}
+#gwpGnb #gwp_quickmenu .gwp_mobile a:hover {
+  background-position: -300px -50px;
+}
+#gwpGnb #gwp_quickmenu .gwp_yellowpage2 a:hover {
+  background-position: -330px -50px;
+}
 
 /*================================================
 Language
 ================================================*/
-#gwpGnb #gwp_lang {float:left; height:16px; border-left:#eaeaea 1px solid; border-right:#eaeaea 1px solid; margin-top:4px; padding-left:12px; padding-right:5px}
-#gwpGnb #gwp_lang li {line-height:14px; float:left; margin-right:9px}
-#gwpGnb #gwp_lang a {font-size:10px; color:#9c9c9c; text-decoration:none; cursor:pointer}
-#gwpGnb #gwp_lang .gwp_selected a {color:#e71a1a}
-
+#gwpGnb #gwp_lang {
+  float: left;
+  height: 16px;
+  border-left: #eaeaea 1px solid;
+  border-right: #eaeaea 1px solid;
+  margin-top: 4px;
+  padding-left: 12px;
+  padding-right: 5px;
+}
+#gwpGnb #gwp_lang li {
+  line-height: 14px;
+  float: left;
+  margin-right: 9px;
+}
+#gwpGnb #gwp_lang a {
+  font-size: 10px;
+  color: #9c9c9c;
+  text-decoration: none;
+  cursor: pointer;
+}
+#gwpGnb #gwp_lang .gwp_selected a {
+  color: #e71a1a;
+}
 
 /*================================================
 Logout
 ================================================*/
-#gwpGnb #gwp_logout {float:left; height:16px; margin-top:4px; padding-right:5px; line-height:16px; margin-left:-1px}
-#gwpGnb #gwp_logout .gwp_btn_logout {text-decoration:none; text-indent:-1000px; display:block; width:48px; height:16px; overflow:hidden; background:url(/Portal/CustomExtension/GroupPortal/Resources/images/img_gnb.png) left -150px; cursor:pointer}
-#gwpGnb #gwp_logout .gwp_btn_logout:hover {background-position: -50px -150px}
-
+#gwpGnb #gwp_logout {
+  float: left;
+  height: 16px;
+  margin-top: 4px;
+  padding-right: 5px;
+  line-height: 16px;
+  margin-left: -1px;
+}
+#gwpGnb #gwp_logout .gwp_btn_logout {
+  text-decoration: none;
+  text-indent: -1000px;
+  display: block;
+  width: 48px;
+  height: 16px;
+  overflow: hidden;
+  background: url(../images/gnb/img_gnb.png) left -150px;
+  cursor: pointer;
+}
+#gwpGnb #gwp_logout .gwp_btn_logout:hover {
+  background-position: -50px -150px;
+}
 
 /*================================================
 Location
 ================================================*/
-#gwpGnb #gwp_location {font-size:11px; float:left; margin-right:10px}
-#gwpGnb .gwp_locationTitle {display:block; float:left; width:55px; height:20px; overflow:hidden; text-indent:-1000px; background:url(/Portal/CustomExtension/GroupPortal/Resources/images/img_gnb.png) -100px -97px}
-.gwp_ie6#gwpGnb .gwp_locationTitle {background-image:url(/Portal/CustomExtension/GroupPortal/Resources/images/img_gnb_ie6.jpg)}
-#gwpGnb .gwp_location_selectbox {float:left; position:relative; z-index:300}
-#gwpGnb #gwp_location .gwp_selBtn {font-size:11px; color:#ec0023; text-decoration:none; display:block; padding-left:10px; height:20px}
-.gwp_ie6#gwpGnb #gwp_location .gwp_selBtn {display:inline; vertical-align:-3px}
-#gwpGnb .gwp_btn_location {margin-left:5px; vertical-align: middle}
-#gwpGnb .gwp_location_scrollbox {position:absolute; top:23px; right:0; width:186px; background-color:#FFF; border:#cacaca 1px solid; display:none}
-#gwpGnb .gwp_location_box_header {color:#FFF; background-color:#cacaca; height:23px; line-height:21px; padding:0 12px}
-#gwpGnb .gwp_location_list {padding:7px; overflow:auto; height:86px}
-#gwpGnb .gwp_location_list li {color:#888; line-height:1.2em; padding:3px 0 4px 13px; cursor:pointer; background:url(/Portal/CustomExtension/GroupPortal/Resources/images/img_gnb.png) -394px 0 no-repeat}
-.gwp_ie6#gwpGnb .gwp_location_list li {background-image:url(/Portal/CustomExtension/GroupPortal/Resources/images/img_gnb_ie6.jpg)}
-#gwpGnb .gwp_location_list li:hover {color:#2e2e2e}
-
+#gwpGnb #gwp_location {
+  font-size: 11px;
+  float: left;
+  margin-right: 10px;
+}
+#gwpGnb .gwp_locationTitle {
+  display: block;
+  float: left;
+  width: 55px;
+  height: 20px;
+  overflow: hidden;
+  text-indent: -1000px;
+  background: url(../images/gnb/img_gnb.png) -100px -97px;
+}
+.gwp_ie6#gwpGnb .gwp_locationTitle {
+  background-image: url(/Portal/CustomExtension/GroupPortal/Resources/images/img_gnb_ie6.jpg);
+}
+#gwpGnb .gwp_location_selectbox {
+  float: left;
+  position: relative;
+  z-index: 300;
+}
+#gwpGnb #gwp_location .gwp_selBtn {
+  font-size: 11px;
+  color: #ec0023;
+  text-decoration: none;
+  display: block;
+  padding-left: 10px;
+  height: 20px;
+}
+.gwp_ie6#gwpGnb #gwp_location .gwp_selBtn {
+  display: inline;
+  vertical-align: -3px;
+}
+#gwpGnb .gwp_btn_location {
+  margin-left: 5px;
+  vertical-align: middle;
+}
+#gwpGnb .gwp_location_scrollbox {
+  position: absolute;
+  top: 23px;
+  right: 0;
+  width: 186px;
+  background-color: #fff;
+  border: #cacaca 1px solid;
+  display: none;
+}
+#gwpGnb .gwp_location_box_header {
+  color: #fff;
+  background-color: #cacaca;
+  height: 23px;
+  line-height: 21px;
+  padding: 0 12px;
+}
+#gwpGnb .gwp_location_list {
+  padding: 7px;
+  overflow: auto;
+  height: 86px;
+}
+#gwpGnb .gwp_location_list li {
+  color: #888;
+  line-height: 1.2em;
+  padding: 3px 0 4px 13px;
+  cursor: pointer;
+  background: url(../images/gnb/img_gnb.png) -394px 0 no-repeat;
+}
+.gwp_ie6#gwpGnb .gwp_location_list li {
+  background-image: url(/Portal/CustomExtension/GroupPortal/Resources/images/img_gnb_ie6.jpg);
+}
+#gwpGnb .gwp_location_list li:hover {
+  color: #2e2e2e;
+}
 
 /*================================================
 구성원 및 통합검색
 ================================================*/
 #gwpGnb #gwp_search_people,
-#gwpGnb #gwp_search {float:left; margin-left:5px}
+#gwpGnb #gwp_search {
+  float: left;
+  margin-left: 5px;
+}
 /*
 #gwpGnb #gwp_search_people .gwp_input_text,
 #gwpGnb #gwp_search .gwp_input_text {display:inline-block; box-sizing:content-box; height:18px; border-width:1px; border-style:solid; margin-right:-5px; vertical-align:top; .display:block; .float:left}
 20130927 SK건설 관련 수정 */
 #gwpGnb #gwp_search_people .gwp_input_text,
-#gwpGnb #gwp_search .gwp_input_text {box-sizing:content-box !important; height:18px !important; border-width:1px; border-style:solid; margin-right:-5px; vertical-align:top !important; display:block !important; float:left !important; overflow:visible !important}
-#gwpGnb #gwp_search_people .gwp_input_text {border-color:#d5d5d5; background-color:#FFF}
-#gwpGnb #gwp_search .gwp_input_text {border-color:#949494; background-color:#b6b6b6}
+#gwpGnb #gwp_search .gwp_input_text {
+  box-sizing: content-box !important;
+  height: 18px !important;
+  border-width: 1px;
+  border-style: solid;
+  margin-right: -5px;
+  vertical-align: top !important;
+  display: block !important;
+  float: left !important;
+  overflow: visible !important;
+}
+#gwpGnb #gwp_search_people .gwp_input_text {
+  border-color: #d5d5d5;
+  background-color: #fff;
+}
+#gwpGnb #gwp_search .gwp_input_text {
+  border-color: #949494;
+  background-color: #b6b6b6;
+}
 #gwpGnb #gwp_search_people input,
-#gwpGnb #gwp_search input {font-size:11px; float:left; height:18px !important; line-height:17px !important; .line-height:16px !important; padding:0 0 0 5px; margin:0; background-color:transparent; border-width:0 !important; vertical-align:top !important}
+#gwpGnb #gwp_search input {
+  font-size: 11px;
+  float: left;
+  height: 18px !important;
+  line-height: 17px !important;
+  .line-height: 16px !important;
+  padding: 0 0 0 5px;
+  margin: 0;
+  background-color: transparent;
+  border-width: 0 !important;
+  vertical-align: top !important;
+}
 
-#gwpGnb #gwp_search_people input {color:#989898; width:75px}
-#gwpGnb #gwp_search input {color:#FFF; width:125px}
+#gwpGnb #gwp_search_people input {
+  color: #989898;
+  width: 75px;
+}
+#gwpGnb #gwp_search input {
+  color: #fff;
+  width: 125px;
+}
 /* 검색 버튼 */
 /*
 #gwpGnb #gwp_search_people a,
 #gwpGnb #gwp_search a {display:inline-block; width:24px; height:20px; text-indent:-1000px; overflow:hidden; cursor:pointer; background-image:url(/Portal/CustomExtension/GroupPortal/Resources/images/img_gnb.png); vertical-align:top; .display:block; .float:left; .text-indent:0; .font-size:0; .line-height:0}
 20130927 SK건설 관련 수정 */
 #gwpGnb #gwp_search_people a,
-#gwpGnb #gwp_search a {width:24px; height:20px; text-indent:-1000px; overflow:hidden; cursor:pointer; background-image:url(/Portal/CustomExtension/GroupPortal/Resources/images/img_gnb.png); vertical-align:top; display:block; float:left; text-indent:0; font-size:0; line-height:0}
+#gwpGnb #gwp_search a {
+  width: 24px;
+  height: 20px;
+  text-indent: -1000px;
+  overflow: hidden;
+  cursor: pointer;
+  background-image: url(../images/gnb/img_gnb.png);
+  vertical-align: top;
+  display: block;
+  float: left;
+  text-indent: 0;
+  font-size: 0;
+  line-height: 0;
+}
 .gwp_ie6#gwpGnb #gwp_search_people a,
-.gwp_ie6#gwpGnb #gwp_search a {background-image:url(/Portal/CustomExtension/GroupPortal/Resources/images/img_gnb_ie6.jpg)}
+.gwp_ie6#gwpGnb #gwp_search a {
+  background-image: url(/Portal/CustomExtension/GroupPortal/Resources/images/img_gnb_ie6.jpg);
+}
 
-#gwpGnb #gwp_search_people a {background-position:0 -100px}
-#gwpGnb #gwp_search a {background-position:-50px -100px}
-
+#gwpGnb #gwp_search_people a {
+  background-position: 0 -100px;
+}
+#gwpGnb #gwp_search a {
+  background-position: -50px -100px;
+}
 
 /*================================================
 윤리강령 배너
 ================================================*/
-#gwpGnb .gwp_bann {font-size:0; line-height:0}
-#gwpGnb.gwp_gnb_relative #gwp_banner.gwp_bann {position:absolute; top:0px; right:0px}
-#gwpGnb.gwp_gnb_relative .gwp_bann img {margin-left:-1px}
-#gwpGnb.gwp_gnb_integrated .gwp_bann {float:left; margin-left:-1px}
-#gwpGnb.gwp_gnb_integrated .gwp_bann .gwp_integrated {display:block}
-#gwpGnb.gwp_gnb_integrated .gwp_bann .gwp_relative {display:none}
-#gwpGnb.gwp_gnb_relative .gwp_bann .gwp_integrated {display:none}
-#gwpGnb.gwp_gnb_relative .gwp_bann .gwp_relative {display:block}
-
+#gwpGnb .gwp_bann {
+  font-size: 0;
+  line-height: 0;
+}
+#gwpGnb.gwp_gnb_relative #gwp_banner.gwp_bann {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+#gwpGnb.gwp_gnb_relative .gwp_bann img {
+  margin-left: -1px;
+}
+#gwpGnb.gwp_gnb_integrated .gwp_bann {
+  float: left;
+  margin-left: -1px;
+}
+#gwpGnb.gwp_gnb_integrated .gwp_bann .gwp_integrated {
+  display: block;
+}
+#gwpGnb.gwp_gnb_integrated .gwp_bann .gwp_relative {
+  display: none;
+}
+#gwpGnb.gwp_gnb_relative .gwp_bann .gwp_integrated {
+  display: none;
+}
+#gwpGnb.gwp_gnb_relative .gwp_bann .gwp_relative {
+  display: block;
+}
 
 /*================================================
 GNB 네비게이션 영역
 ================================================*/
-#gwpGnb .gwp_nav_wrap {height:36px; padding-top:12px}
+#gwpGnb .gwp_nav_wrap {
+  height: 36px;
+  padding-top: 12px;
+}
 
 /* logo */
-#gwpGnb .gwp_logo {text-indent:-1000px; margin-left:4px; display:block; width:106px; height:26px; overflow:hidden; float:left; background:url(/Portal/CustomExtension/GroupPortal/Resources/images/img_gnb.png) 0 0 no-repeat; cursor:pointer}
-.gwp_ie6#gwpGnb .gwp_logo {text-indent:0; font-size:0; line-height:0; background-image:url(/Portal/CustomExtension/GroupPortal/Resources/images/img_gnb_ie6.jpg)}
-
+#gwpGnb .gwp_logo {
+  text-indent: -1000px;
+  margin-left: 4px;
+  display: block;
+  width: 106px;
+  height: 26px;
+  overflow: hidden;
+  float: left;
+  background: url(../images/gnb/img_gnb.png) 0 0 no-repeat;
+  cursor: pointer;
+}
+.gwp_ie6#gwpGnb .gwp_logo {
+  text-indent: 0;
+  font-size: 0;
+  line-height: 0;
+  background-image: url(/Portal/CustomExtension/GroupPortal/Resources/images/img_gnb_ie6.jpg);
+}
 
 /*================================================
 네비게이션_toktok GNB
 ================================================*/
-#gwpGnb #gwp_nav_toktok {float:left; margin-left:7px; margin-top:5px}
-#gwpGnb #gwp_nav_toktok a {font-family:'Malgun gothic'; text-decoration:none}
-#gwpGnb.en #gwp_nav_toktok a {font-family:arial, verdana, tahoma, 'Malgun Gothic', Gulim, Dotum}
-#gwpGnb.zh #gwp_nav_toktok a {font-family:Arial,"宋体", 'Malgun Gothic'}
-#gwpGnb #gwp_nav_toktok .gwp_depth1 .gwp_menu_depth1 {/*font-size:17px;*/ font-size:16px; float:left; height:31px}
-#gwpGnb #gwp_nav_toktok .gwp_depth1 .gwp_menu_depth1_link {color:#373737; /*font-size:17px;*/ font-size:16px; line-height:22px; font-weight:bold; text-decoration:none; display:block; padding:0 6px 10px}
-#gwpGnb.ko #gwp_nav_toktok .gwp_depth1 .gwp_menu_depth1_link {letter-spacing:-0.04em}
-#gwpGnb.en #gwp_nav_toktok .gwp_depth1 .gwp_menu_depth1_link {font-size:13px; padding-left:6px; padding-right:6px}
-#gwpGnb #gwp_nav_toktok .gwp_sub .gwp_menu_depth1_link {padding:0}
-#gwpGnb #gwp_nav_toktok .gwp_depth1 .gwp_menu_depth1:hover .gwp_menu_depth1_link,
-#gwpGnb #gwp_nav_toktok .gwp_depth1 .gwp_selected .gwp_menu_depth1_link {color:#e90f0f}
+#gwpGnb #gwp_nav_toktok {
+  float: left;
+  margin-left: 7px;
+  margin-top: 5px;
+}
+#gwpGnb #gwp_nav_toktok a {
+  font-family: "Malgun gothic";
+  text-decoration: none;
+}
+#gwpGnb.en #gwp_nav_toktok a {
+  font-family: arial, verdana, tahoma, "Malgun Gothic", Gulim, Dotum;
+}
+#gwpGnb.zh #gwp_nav_toktok a {
+  font-family: Arial, "宋体", "Malgun Gothic";
+}
+#gwpGnb #gwp_nav_toktok .gwp_depth1 .gwp_menu_depth1 {
+  /*font-size:17px;*/
+  font-size: 16px;
+  float: left;
+  height: 31px;
+}
+#gwpGnb #gwp_nav_toktok .gwp_depth1 .gwp_menu_depth1_link {
+  color: #373737; /*font-size:17px;*/
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  padding: 0 6px 10px;
+}
+#gwpGnb.ko #gwp_nav_toktok .gwp_depth1 .gwp_menu_depth1_link {
+  letter-spacing: -0.04em;
+}
+#gwpGnb.en #gwp_nav_toktok .gwp_depth1 .gwp_menu_depth1_link {
+  font-size: 13px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+#gwpGnb #gwp_nav_toktok .gwp_sub .gwp_menu_depth1_link {
+  padding: 0;
+}
+#gwpGnb
+  #gwp_nav_toktok
+  .gwp_depth1
+  .gwp_menu_depth1:hover
+  .gwp_menu_depth1_link,
+#gwpGnb #gwp_nav_toktok .gwp_depth1 .gwp_selected .gwp_menu_depth1_link {
+  color: #e90f0f;
+}
 /* toktokTV 메뉴 추가 (2020-09-04) */
-#gwpGnb #gwp_nav_toktok .gwp_depth1 .toktokTV
-{display:block; background:url(/Portal/CustomExtension/GroupPortal/Resources/images/img_gnb.png) 0 -180px no-repeat; cursor:pointer; width:94px; height:24px; margin:-3px 6px 0; text-indent:-9999px;}
+#gwpGnb #gwp_nav_toktok .gwp_depth1 .toktokTV {
+  display: block;
+  background: url(../images/gnb/img_gnb.png) 0 -180px no-repeat;
+  cursor: pointer;
+  width: 94px;
+  height: 24px;
+  margin: -3px 6px 0;
+  text-indent: -9999px;
+}
 
 /* toktok submenu */
-#gwpGnb #gwp_nav_toktok .gwp_sub {width:100%; position:absolute; top:80px; left:0; z-index:298; background:url(/Portal/CustomExtension/GroupPortal/Resources/images/bg_toktok_dep2.jpg) repeat-x #FFF; border-bottom:1px solid #cecdcd; /* border-top:#e31937 2px solid */padding-top:2px}
-.gwp_ie6#gwpGnb #gwp_nav_toktok .gwp_sub {top:81px; right:0}
-#gwpGnb #gwp_nav_toktok .gwp_sub_fix {width:980px; min-width:980px; margin:0 auto}
-#gwpGnb #gwp_nav_toktok .gwp_nav_fullmenu {/* width:100%; */ table-layout: fixed; border-left:1px solid #ededed}
-#gwpGnb #gwp_nav_toktok .gwp_nav_fullmenu th {text-align:left; line-height:20px; border-right:1px solid #ededed; vertical-align:top; padding:15px 0 7px 0; width:244px}
-#gwpGnb #gwp_nav_toktok .gwp_nav_fullmenu td {border-right:1px solid #ededed; vertical-align:top; padding-bottom:15px}
-#gwpGnb #gwp_nav_toktok .gwp_sub .gwp_depth1_name {padding:0 20px}
-#gwpGnb #gwp_nav_toktok .gwp_sub .gwp_menu_depth1_link {font-size:15px; color:#f6400f; font-weight:bold; padding:0; display:block}
-#gwpGnb #gwp_nav_toktok .gwp_sub .gwp_depth2_container {width:100%}
-.gwp_ie6#gwpGnb #gwp_nav_toktok .gwp_sub .gwp_menu_depth2 {font-size:0; line-height:0}
-#gwpGnb #gwp_nav_toktok .gwp_sub .gwp_menu_depth2_link {color:#646464; font-size:13px; line-height:18px; overflow:hidden; display:block; padding:6px 20px 6px 20px}
-#gwpGnb #gwp_nav_toktok .gwp_sub .gwp_menu_depth2_link:hover {color:#FFF; background-color:#f51134}
-
-
+#gwpGnb #gwp_nav_toktok .gwp_sub {
+  width: 100%;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  z-index: 298;
+  background: url(/Portal/CustomExtension/GroupPortal/Resources/images/bg_toktok_dep2.jpg)
+    repeat-x #fff;
+  border-bottom: 1px solid #cecdcd; /* border-top:#e31937 2px solid */
+  padding-top: 2px;
+}
+.gwp_ie6#gwpGnb #gwp_nav_toktok .gwp_sub {
+  top: 81px;
+  right: 0;
+}
+#gwpGnb #gwp_nav_toktok .gwp_sub_fix {
+  width: 980px;
+  min-width: 980px;
+  margin: 0 auto;
+}
+#gwpGnb #gwp_nav_toktok .gwp_nav_fullmenu {
+  /* width:100%; */
+  table-layout: fixed;
+  border-left: 1px solid #ededed;
+}
+#gwpGnb #gwp_nav_toktok .gwp_nav_fullmenu th {
+  text-align: left;
+  line-height: 20px;
+  border-right: 1px solid #ededed;
+  vertical-align: top;
+  padding: 15px 0 7px 0;
+  width: 244px;
+}
+#gwpGnb #gwp_nav_toktok .gwp_nav_fullmenu td {
+  border-right: 1px solid #ededed;
+  vertical-align: top;
+  padding-bottom: 15px;
+}
+#gwpGnb #gwp_nav_toktok .gwp_sub .gwp_depth1_name {
+  padding: 0 20px;
+}
+#gwpGnb #gwp_nav_toktok .gwp_sub .gwp_menu_depth1_link {
+  font-size: 15px;
+  color: #f6400f;
+  font-weight: bold;
+  padding: 0;
+  display: block;
+}
+#gwpGnb #gwp_nav_toktok .gwp_sub .gwp_depth2_container {
+  width: 100%;
+}
+.gwp_ie6#gwpGnb #gwp_nav_toktok .gwp_sub .gwp_menu_depth2 {
+  font-size: 0;
+  line-height: 0;
+}
+#gwpGnb #gwp_nav_toktok .gwp_sub .gwp_menu_depth2_link {
+  color: #646464;
+  font-size: 13px;
+  line-height: 18px;
+  overflow: hidden;
+  display: block;
+  padding: 6px 20px 6px 20px;
+}
+#gwpGnb #gwp_nav_toktok .gwp_sub .gwp_menu_depth2_link:hover {
+  color: #fff;
+  background-color: #f51134;
+}
 
 /*================================================
 네비게이션_관계사 GNB
 ================================================*/
-#gwpGnb #gwp_nav_relative {float:right; position:relative; z-index:1; margin-top:1px}
-#gwpGnb #gwp_nav_relative a {font-family:'Malgun gothic', arial; text-decoration:none; display:block}
-#gwpGnb.en #gwp_nav_relative a {font-family:arial, verdana, tahoma, 'Malgun Gothic', Gulim, Dotum}
-#gwpGnb.zh #gwp_nav_relative a {font-family:Arial,"宋体",'Malgun Gothic'}
-#gwpGnb #gwp_nav_relative .gwp_depth1 .gwp_menu_depth1 {float:left}
-#gwpGnb #gwp_nav_relative .gwp_menu_depth1_link {font-family:'Malgun gothic'; color:#3e3e3e; font-size:12px; font-weight:bold; text-decoration:none; padding-left:8px; padding-right:8px; display:block; padding-top:6px; height:29px}
-#gwpGnb.en #gwp_nav_relative .gwp_menu_depth1_link {font-family:arial, verdana, tahoma, 'Malgun Gothic', Gulim, Dotum; font-weight:normal; padding-left:6px; padding-right:6px}
-#gwpGnb.zh #gwp_nav_relative .gwp_menu_depth1_link {font-family:Arial,"宋体",'Malgun Gothic'}
-.gwp_ie6#gwpGnb #gwp_nav_relative .gwp_menu_depth1_link {float:left}
+#gwpGnb #gwp_nav_relative {
+  float: right;
+  position: relative;
+  z-index: 1;
+  margin-top: 1px;
+}
+#gwpGnb #gwp_nav_relative a {
+  font-family: "Malgun gothic", arial;
+  text-decoration: none;
+  display: block;
+}
+#gwpGnb.en #gwp_nav_relative a {
+  font-family: arial, verdana, tahoma, "Malgun Gothic", Gulim, Dotum;
+}
+#gwpGnb.zh #gwp_nav_relative a {
+  font-family: Arial, "宋体", "Malgun Gothic";
+}
+#gwpGnb #gwp_nav_relative .gwp_depth1 .gwp_menu_depth1 {
+  float: left;
+}
+#gwpGnb #gwp_nav_relative .gwp_menu_depth1_link {
+  font-family: "Malgun gothic";
+  color: #3e3e3e;
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  padding-left: 8px;
+  padding-right: 8px;
+  display: block;
+  padding-top: 6px;
+  height: 29px;
+}
+#gwpGnb.en #gwp_nav_relative .gwp_menu_depth1_link {
+  font-family: arial, verdana, tahoma, "Malgun Gothic", Gulim, Dotum;
+  font-weight: normal;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+#gwpGnb.zh #gwp_nav_relative .gwp_menu_depth1_link {
+  font-family: Arial, "宋体", "Malgun Gothic";
+}
+.gwp_ie6#gwpGnb #gwp_nav_relative .gwp_menu_depth1_link {
+  float: left;
+}
 #gwpGnb #gwp_nav_relative .gwp_menu_depth1.gwp_selected .gwp_menu_depth1_link,
-#gwpGnb #gwp_nav_relative .gwp_menu_depth1_link:hover {color:#e90f0f; background:url(/Portal/CustomExtension/GroupPortal/Resources/images/bg_relative_dep1.jpg) center bottom no-repeat; }
-#gwpGnb #gwp_nav_relative .gwp_depth2 {position:absolute; right:0; top:35px; width:980px; z-index:299; display:none}
-#gwpGnb #gwp_nav_relative .gwp_depth2_container {background-color:#FFF; overflow:hidden; border:2px solid #e41937; position:absolute; top:0}
-#gwpGnb #gwp_nav_relative .gwp_menu_depth2 {float:left}
-.gwp_ie6#gwpGnb #gwp_nav_relative .gwp_menu_depth2 {zoom:1}
-#gwpGnb #gwp_nav_relative .gwp_menu_depth2_link {color:#e41839; text-align:center; font-weight:bold; height:32px; line-height:30px; background-color:#464f5a; min-width:128px; padding-left:5px; padding-right:5px; background-color:#FFF; border-bottom:1px solid #e3e3e3; overflow:hidden}
-.gwp_ie6#gwpGnb #gwp_nav_relative .gwp_menu_depth2_link {display:inline; zoom:1; margin-bottom:-1px}
-#gwpGnb #gwp_nav_relative .gwp_depth3 {float:left; padding-bottom:7px}
-.gwp_ie6#gwpGnb #gwp_nav_relative .gwp_depth3 {border-top:1px solid #e3e3e3}
-#gwpGnb #gwp_nav_relative .gwp_depth3_container {float:left; width:139px; height:100%; padding-top:5px; padding-bottom:5px; border-left:1px solid #ebebeb; margin-left:-1px}
-.gwp_ie6#gwpGnb #gwp_nav_relative .gwp_depth3_container {margin-left:0; margin-right:-1px}
-#gwpGnb #gwp_nav_relative .gwp_menu_depth3 {font-size:12px; line-height:14px; /* position:absolute (20130729 수정) */}
-#gwpGnb #gwp_nav_relative .gwp_menu_depth3_link {line-height:23px; color:#828282; padding:0 5px; /* padding:2px 5px 8px; (20130816 수정) */ height:24px; overflow:hidden}
-#gwpGnb #gwp_nav_relative .gwp_menu_depth3_link:hover {color:#FFF; background-color:#e41937}
+#gwpGnb #gwp_nav_relative .gwp_menu_depth1_link:hover {
+  color: #e90f0f;
+  background: url(/Portal/CustomExtension/GroupPortal/Resources/images/bg_relative_dep1.jpg)
+    center bottom no-repeat;
+}
+#gwpGnb #gwp_nav_relative .gwp_depth2 {
+  position: absolute;
+  right: 0;
+  top: 35px;
+  width: 980px;
+  z-index: 299;
+  display: none;
+}
+#gwpGnb #gwp_nav_relative .gwp_depth2_container {
+  background-color: #fff;
+  overflow: hidden;
+  border: 2px solid #e41937;
+  position: absolute;
+  top: 0;
+}
+#gwpGnb #gwp_nav_relative .gwp_menu_depth2 {
+  float: left;
+}
+.gwp_ie6#gwpGnb #gwp_nav_relative .gwp_menu_depth2 {
+  zoom: 1;
+}
+#gwpGnb #gwp_nav_relative .gwp_menu_depth2_link {
+  color: #e41839;
+  text-align: center;
+  font-weight: bold;
+  height: 32px;
+  line-height: 30px;
+  background-color: #464f5a;
+  min-width: 128px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: #fff;
+  border-bottom: 1px solid #e3e3e3;
+  overflow: hidden;
+}
+.gwp_ie6#gwpGnb #gwp_nav_relative .gwp_menu_depth2_link {
+  display: inline;
+  zoom: 1;
+  margin-bottom: -1px;
+}
+#gwpGnb #gwp_nav_relative .gwp_depth3 {
+  float: left;
+  padding-bottom: 7px;
+}
+.gwp_ie6#gwpGnb #gwp_nav_relative .gwp_depth3 {
+  border-top: 1px solid #e3e3e3;
+}
+#gwpGnb #gwp_nav_relative .gwp_depth3_container {
+  float: left;
+  width: 139px;
+  height: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-left: 1px solid #ebebeb;
+  margin-left: -1px;
+}
+.gwp_ie6#gwpGnb #gwp_nav_relative .gwp_depth3_container {
+  margin-left: 0;
+  margin-right: -1px;
+}
+#gwpGnb #gwp_nav_relative .gwp_menu_depth3 {
+  font-size: 12px;
+  line-height: 14px; /* position:absolute (20130729 수정) */
+}
+#gwpGnb #gwp_nav_relative .gwp_menu_depth3_link {
+  line-height: 23px;
+  color: #828282;
+  padding: 0 5px; /* padding:2px 5px 8px; (20130816 수정) */
+  height: 24px;
+  overflow: hidden;
+}
+#gwpGnb #gwp_nav_relative .gwp_menu_depth3_link:hover {
+  color: #fff;
+  background-color: #e41937;
+}
 
 /* 3depth 없는 경우의 2depth */
-#gwpGnb #gwp_nav_relative .gwp_noDepth3 {overflow:hidden; border:2px solid #e41937; position:absolute; top:0; background-color:#FFF}
-.gwp_ie6#gwpGnb #gwp_nav_relative .gwp_noDepth3 .gwp_noDepth3_container {float:left}
-#gwpGnb #gwp_nav_relative .gwp_noDepth3 .gwp_depth2_container {float:left; min-width:139px; height:100%; position:static; border-width:0; background:none; padding-top:5px; padding-bottom:5px; border-left:1px solid #ebebeb; margin-left:-1px}
-.gwp_ie6#gwpGnb #gwp_nav_relative .gwp_noDepth3 .gwp_depth2_container {width:139px;}
+#gwpGnb #gwp_nav_relative .gwp_noDepth3 {
+  overflow: hidden;
+  border: 2px solid #e41937;
+  position: absolute;
+  top: 0;
+  background-color: #fff;
+}
+.gwp_ie6#gwpGnb #gwp_nav_relative .gwp_noDepth3 .gwp_noDepth3_container {
+  float: left;
+}
+#gwpGnb #gwp_nav_relative .gwp_noDepth3 .gwp_depth2_container {
+  float: left;
+  min-width: 139px;
+  height: 100%;
+  position: static;
+  border-width: 0;
+  background: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-left: 1px solid #ebebeb;
+  margin-left: -1px;
+}
+.gwp_ie6#gwpGnb #gwp_nav_relative .gwp_noDepth3 .gwp_depth2_container {
+  width: 139px;
+}
 /* (20131011 수정 - 아래 내용 참고)
 #gwpGnb #gwp_nav_relative .gwp_noDepth3 .gwp_menu_depth2 {font-size:12px; line-height:14px; float:none}
 #gwpGnb #gwp_nav_relative .gwp_noDepth3 .gwp_menu_depth2_link {line-height:23px; color:#828282; font-weight:normal; text-align:left; padding:0 5px; height:24px; overflow:hidden; min-width:129px; border-bottom-width:0; background-color:transparent}
 .gwp_ie6#gwpGnb #gwp_nav_relative .gwp_noDepth3 .gwp_menu_depth2_link {display:block}
 #gwpGnb #gwp_nav_relative .gwp_noDepth3 .gwp_menu_depth2_link:hover {color:#FFF; background-color:#e41937}
 */
-#gwpGnb #gwp_nav_relative .gwp_noDepth3 .gwp_menu_depth3 {font-size:12px; line-height:14px; float:none}
-#gwpGnb #gwp_nav_relative .gwp_noDepth3 .gwp_menu_depth3_link {line-height:23px; color:#828282; font-weight:normal; text-align:left; padding:0 5px; height:24px; overflow:hidden; min-width:129px; border-bottom-width:0; background-color:transparent}
-.gwp_ie6#gwpGnb #gwp_nav_relative .gwp_noDepth3 .gwp_menu_depth3_link {display:block}
-#gwpGnb #gwp_nav_relative .gwp_noDepth3 .gwp_menu_depth3_link:hover {color:#FFF; background-color:#e41937}
-
+#gwpGnb #gwp_nav_relative .gwp_noDepth3 .gwp_menu_depth3 {
+  font-size: 12px;
+  line-height: 14px;
+  float: none;
+}
+#gwpGnb #gwp_nav_relative .gwp_noDepth3 .gwp_menu_depth3_link {
+  line-height: 23px;
+  color: #828282;
+  font-weight: normal;
+  text-align: left;
+  padding: 0 5px;
+  height: 24px;
+  overflow: hidden;
+  min-width: 129px;
+  border-bottom-width: 0;
+  background-color: transparent;
+}
+.gwp_ie6#gwpGnb #gwp_nav_relative .gwp_noDepth3 .gwp_menu_depth3_link {
+  display: block;
+}
+#gwpGnb #gwp_nav_relative .gwp_noDepth3 .gwp_menu_depth3_link:hover {
+  color: #fff;
+  background-color: #e41937;
+}
 
 /*================================================
 GNB 푸터
 ================================================*/
-#gwpGnb .gwp_footer {height:30px; background-color:#bcbcbc; position:relative; clear:both; zoom:1; float:left; width:100%}
+#gwpGnb .gwp_footer {
+  height: 30px;
+  background-color: #bcbcbc;
+  position: relative;
+  clear: both;
+  zoom: 1;
+  float: left;
+  width: 100%;
+}
 
 /* 탭메뉴 */
-#gwpGnb #gwp_nav_tab {float:left}
-.gwp_ie6#gwpGnb #gwp_nav_tab {float:none; position:absolute; top:0; left:0}
-#gwpGnb #gwp_nav_tab li {float:left}
-#gwpGnb #gwp_nav_tab a {color:#FFF; font-size:13px; font-weight:bold; line-height:30px; text-decoration:none; text-align:center;  display:block; height:30px; padding:0 30px; min-width:65px; border-right:1px solid #e3e3e3}
-.gwp_ie6 #gwp_nav_tab a {zoom:1; padding:7px 30px 6px; float:left}
-#gwpGnb #gwp_nav_tab a:hover {background-color:#909090}
-#gwpGnb #gwp_nav_tab .gwp_selected a {background-color:#e31937}
-
+#gwpGnb #gwp_nav_tab {
+  float: left;
+}
+.gwp_ie6#gwpGnb #gwp_nav_tab {
+  float: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#gwpGnb #gwp_nav_tab li {
+  float: left;
+}
+#gwpGnb #gwp_nav_tab a {
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 30px;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  height: 30px;
+  padding: 0 30px;
+  min-width: 65px;
+  border-right: 1px solid #e3e3e3;
+}
+.gwp_ie6 #gwp_nav_tab a {
+  zoom: 1;
+  padding: 7px 30px 6px;
+  float: left;
+}
+#gwpGnb #gwp_nav_tab a:hover {
+  background-color: #909090;
+}
+#gwpGnb #gwp_nav_tab .gwp_selected a {
+  background-color: #e31937;
+}
 
 /*================================================
 Bookmark
 ================================================*/
-#gwpGnb #gwp_myBookmark {float:right; margin:3px 5px 3px 0}
-.gwp_ie6#gwpGnb #gwp_myBookmark {float:none; position:absolute; right:5px}
-#gwpGnb #gwp_myBookmark .gwp_selBtn {font-size:12px; color:#696969; line-height:21px; font-weight:bold; background-color:#FFF; border:1px solid #c0c0c0; display:block; height:21px; width:213px; padding-left:10px; text-decoration:none; float:right}
-#gwpGnb #gwp_myBookmark .gwp_btn_bookmark {position:absolute; right:6px; top:4px}
-.gwp_ie6#gwpGnb #gwp_myBookmark .gwp_btn_bookmark {right:1px; top:1px}
-#gwpGnb #gwp_myBookmark .gwp_bookmark_pop {position:absolute; top:25px; right:5px; background-color:#FFF; border:1px solid #c0c0c0; padding:2px; display:none}
-.gwp_ie6#gwpGnb #gwp_myBookmark .gwp_bookmark_pop {top:22px; right:-1px}
+#gwpGnb #gwp_myBookmark {
+  float: right;
+  margin: 3px 5px 3px 0;
+}
+.gwp_ie6#gwpGnb #gwp_myBookmark {
+  float: none;
+  position: absolute;
+  right: 5px;
+}
+#gwpGnb #gwp_myBookmark .gwp_selBtn {
+  font-size: 12px;
+  color: #696969;
+  line-height: 21px;
+  font-weight: bold;
+  background-color: #fff;
+  border: 1px solid #c0c0c0;
+  display: block;
+  height: 21px;
+  width: 213px;
+  padding-left: 10px;
+  text-decoration: none;
+  float: right;
+}
+#gwpGnb #gwp_myBookmark .gwp_btn_bookmark {
+  position: absolute;
+  right: 6px;
+  top: 4px;
+}
+.gwp_ie6#gwpGnb #gwp_myBookmark .gwp_btn_bookmark {
+  right: 1px;
+  top: 1px;
+}
+#gwpGnb #gwp_myBookmark .gwp_bookmark_pop {
+  position: absolute;
+  top: 25px;
+  right: 5px;
+  background-color: #fff;
+  border: 1px solid #c0c0c0;
+  padding: 2px;
+  display: none;
+}
+.gwp_ie6#gwpGnb #gwp_myBookmark .gwp_bookmark_pop {
+  top: 22px;
+  right: -1px;
+}
 
-#gwpGnb #gwp_myBookmark .gwp_bookmark_container {padding:16px 16px 31px; vertical-align:top; float:left; width:187px}
-#gwpGnb #gwp_myBookmark .gwp_myBookmark_header {width:195px; height:36px; overflow:hidden; margin-bottom:13px; padding-top:4px}
-#gwpGnb #gwp_myBookmark .gwp_myBookmark_header .gwp_title {font-size:21px; line-height:29px; color:#dd3400; float:left; border-bottom:1px solid #dd3400; }
-#gwpGnb #gwp_myBookmark .gwp_btn_set {float:right; margin-top:13px; margin-right:5px}
-#gwpGnb #gwp_myBookmark .gwp_btn_set a {font-size:11px; color:#595959; text-decoration:none}
+#gwpGnb #gwp_myBookmark .gwp_bookmark_container {
+  padding: 16px 16px 31px;
+  vertical-align: top;
+  float: left;
+  width: 187px;
+}
+#gwpGnb #gwp_myBookmark .gwp_myBookmark_header {
+  width: 195px;
+  height: 36px;
+  overflow: hidden;
+  margin-bottom: 13px;
+  padding-top: 4px;
+}
+#gwpGnb #gwp_myBookmark .gwp_myBookmark_header .gwp_title {
+  font-size: 21px;
+  line-height: 29px;
+  color: #dd3400;
+  float: left;
+  border-bottom: 1px solid #dd3400;
+}
+#gwpGnb #gwp_myBookmark .gwp_btn_set {
+  float: right;
+  margin-top: 13px;
+  margin-right: 5px;
+}
+#gwpGnb #gwp_myBookmark .gwp_btn_set a {
+  font-size: 11px;
+  color: #595959;
+  text-decoration: none;
+}
 
-#gwpGnb .gwp_linkBanner {line-height:0; font-size:0; margin-bottom:18px}
-#gwpGnb .gwp_linkBanner {overflow:hidden}/* ie7에서 가로스크롤이 생기는 현상 제거 */
-#gwpGnb .gwp_linkBanner a {font-size:0; line-height:0; display:block; margin-bottom:5px}
-#gwpGnb .gwp_linkBanner img {width:100%}
+#gwpGnb .gwp_linkBanner {
+  line-height: 0;
+  font-size: 0;
+  margin-bottom: 18px;
+}
+#gwpGnb .gwp_linkBanner {
+  overflow: hidden;
+} /* ie7에서 가로스크롤이 생기는 현상 제거 */
+#gwpGnb .gwp_linkBanner a {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  margin-bottom: 5px;
+}
+#gwpGnb .gwp_linkBanner img {
+  width: 100%;
+}
 
-#gwpGnb #gwp_myBookmark .gwp_myBookmark_body {overflow:auto; height:172px}/* bookmark 스크롤박스 높이 */
-#gwpGnb #gwp_myBookmark li {line-height:16px; padding:2px 0 3px}
-#gwpGnb #gwp_myBookmark li a {color:#5b5b5b; text-decoration:none; line-height:16px; display:block; background:url(/Portal/CustomExtension/GroupPortal/Resources/images/img_gnb.png) -394px 0 no-repeat; padding-left:13px; cursor:pointer}
-.gwp_ie6#gwpGnb #gwp_myBookmark li a {background-image:url(/Portal/CustomExtension/GroupPortal/Resources/images/img_gnb_ie6.jpg)}
-#gwpGnb #gwp_myBookmark li:hover a {color:#000}
-
+#gwpGnb #gwp_myBookmark .gwp_myBookmark_body {
+  overflow: auto;
+  height: 172px;
+} /* bookmark 스크롤박스 높이 */
+#gwpGnb #gwp_myBookmark li {
+  line-height: 16px;
+  padding: 2px 0 3px;
+}
+#gwpGnb #gwp_myBookmark li a {
+  color: #5b5b5b;
+  text-decoration: none;
+  line-height: 16px;
+  display: block;
+  background: url(../images/gnb/img_gnb.png) -394px 0 no-repeat;
+  padding-left: 13px;
+  cursor: pointer;
+}
+.gwp_ie6#gwpGnb #gwp_myBookmark li a {
+  background-image: url(/Portal/CustomExtension/GroupPortal/Resources/images/img_gnb_ie6.jpg);
+}
+#gwpGnb #gwp_myBookmark li:hover a {
+  color: #000;
+}
 
 /*================================================
 GNB Button
 ================================================*/
-#gwpGnb .gwp_btn {display:inline-block; background-image:url(/Portal/CustomExtension/GroupPortal/Resources/images/img_gnb.png); cursor:pointer}
-.gwp_ie6#gwpGnb .gwp_btn {background-image:url(/Portal/CustomExtension/GroupPortal/Resources/images/img_gnb_ie6.jpg)}
-#gwpGnb .gwp_btn_location {width:13px; height:13px; background-position:-200px -100px}
-#gwpGnb .gwp_selected .gwp_btn_location {background-position:-250px -100px}
-#gwpGnb .gwp_btn_bookmark {background-position:-300px -100px; width:15px; height:21px}
-#gwpGnb .gwp_selected .gwp_btn_bookmark {background-position:-350px -100px}
-
+#gwpGnb .gwp_btn {
+  display: inline-block;
+  background-image: url(../images/gnb/img_gnb.png);
+  cursor: pointer;
+}
+.gwp_ie6#gwpGnb .gwp_btn {
+  background-image: url(/Portal/CustomExtension/GroupPortal/Resources/images/img_gnb_ie6.jpg);
+}
+#gwpGnb .gwp_btn_location {
+  width: 13px;
+  height: 13px;
+  background-position: -200px -100px;
+}
+#gwpGnb .gwp_selected .gwp_btn_location {
+  background-position: -250px -100px;
+}
+#gwpGnb .gwp_btn_bookmark {
+  background-position: -300px -100px;
+  width: 15px;
+  height: 21px;
+}
+#gwpGnb .gwp_selected .gwp_btn_bookmark {
+  background-position: -350px -100px;
+}
 
 /*================================================
 유형별 GNB 설정
 ================================================*/
 /* Portal Main GNB 일때 적용 */
-#toktok_header.main {width:1200px; margin:0 auto;}
-#toktok_header.main #gwpGnb.gwp_gnb_relative {padding:0 10px 0 10px;}
+#toktok_header.main {
+  width: 1200px;
+  margin: 0 auto;
+}
+#toktok_header.main #gwpGnb.gwp_gnb_relative {
+  padding: 0 10px 0 10px;
+}
 
 /* 관계사형 GNB */
-#gwpGnb.gwp_gnb_relative {padding:0 50px 0 50px; height:80px !important}
-#gwpGnb.gwp_gnb_relative .gwp_gnb_header {position:relative; z-index:2}
-#gwpGnb.gwp_gnb_relative .gwp_nav_wrap {position:relative; z-index:1}
-#gwpGnb.gwp_gnb_relative .gwp_gnb_wrap {width:auto; min-width:1150px}
-#gwpGnb.gwp_gnb_relative .gwp_logo {position:absolute; left:50%; margin-left:-53px; top:5px}
-#gwpGnb.gwp_gnb_relative .gwp_gnb_header_right {position:absolute; top:45px; right:0}
-#gwpGnb.gwp_gnb_relative #gwp_nav_toktok {margin-left:-5px}
-
+#gwpGnb.gwp_gnb_relative {
+  padding: 0 50px 0 50px;
+  height: 80px !important;
+}
+#gwpGnb.gwp_gnb_relative .gwp_gnb_header {
+  position: relative;
+  z-index: 2;
+}
+#gwpGnb.gwp_gnb_relative .gwp_nav_wrap {
+  position: relative;
+  z-index: 1;
+}
+#gwpGnb.gwp_gnb_relative .gwp_gnb_wrap {
+  width: auto;
+  min-width: 1150px;
+}
+#gwpGnb.gwp_gnb_relative .gwp_logo {
+  position: absolute;
+  left: 50%;
+  margin-left: -53px;
+  top: 5px;
+}
+#gwpGnb.gwp_gnb_relative .gwp_gnb_header_right {
+  position: absolute;
+  top: 45px;
+  right: 0;
+}
+#gwpGnb.gwp_gnb_relative #gwp_nav_toktok {
+  margin-left: -5px;
+}
 
 /* 기타 관계사별 설정 */
 
 /* 우시법인 */
 #gwpGnb.gwp_skhycl .gwp_gnb_wrap,
-#gwpGnb.gwp_skhycl .gwp_sub_fix {width:1220px !important}
+#gwpGnb.gwp_skhycl .gwp_sub_fix {
+  width: 1220px !important;
+}
 /* 충칭법인 */
 #gwpGnb.gwp_skhycq .gwp_gnb_wrap,
-#gwpGnb.gwp_skhycq .gwp_sub_fix {width:1220px !important}
+#gwpGnb.gwp_skhycq .gwp_sub_fix {
+  width: 1220px !important;
+}
 /* SK주식회사 */
 #gwpGnb.gwp_sk .gwp_gnb_wrap,
 #gwpGnb.gwp_sk .gwp_sub_fix,
@@ -395,19 +1104,41 @@ GNB Button
 #gwpGnb.gwp_ghr .gwp_sub_fix,
 /* SK네트워크서비스 */
 #gwpGnb.gwp_skns .gwp_gnb_wrap,
-#gwpGnb.gwp_skns .gwp_sub_fix {width:auto !important; min-width:980px !important; margin-left:10px !important; margin-right:10px !important}
+#gwpGnb.gwp_skns .gwp_sub_fix {
+  width: auto !important;
+  min-width: 980px !important;
+  margin-left: 10px !important;
+  margin-right: 10px !important;
+}
 /* SK하이닉스 */
 #gwpGnb.gwp_skhy .gwp_gnb_wrap,
-#gwpGnb.gwp_skhy .gwp_sub_fix {width:auto !important; min-width:0 !important; margin-left:0 !important; margin-right:0 !important}
-#gwpGnb #gwp_nav_relative .gwp_noDepth3 .gwp_noDepth3_container {padding-bottom:10px}/* ie8호환성/ie7 하단여백 */
+#gwpGnb.gwp_skhy .gwp_sub_fix {
+  width: auto !important;
+  min-width: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+#gwpGnb #gwp_nav_relative .gwp_noDepth3 .gwp_noDepth3_container {
+  padding-bottom: 10px;
+} /* ie8호환성/ie7 하단여백 */
 
 /* SK이노베이션 */
-#gwpGnb.gwp_ski .gwp_gnb_wrap {margin:0 5px !important}
-	/* SK이노베이션 - 전자결재 */
-	#gwpGnb.gwp_gnb_relative.gwp_ski_aprv {padding-left:0; padding-right:0}
+#gwpGnb.gwp_ski .gwp_gnb_wrap {
+  margin: 0 5px !important;
+}
+/* SK이노베이션 - 전자결재 */
+#gwpGnb.gwp_gnb_relative.gwp_ski_aprv {
+  padding-left: 0;
+  padding-right: 0;
+}
 
 /* UAC */
-#gwpGnb.gwp_uac .gwp_gnb_wrap {margin:0 5px !important}
+#gwpGnb.gwp_uac .gwp_gnb_wrap {
+  margin: 0 5px !important;
+}
 
 /* SKC&C */
-#gwpGnb.gwp_skcc.gwp_gnb_relative {padding:0 0 0 10px; margin: 0 11px 0 0;}
+#gwpGnb.gwp_skcc.gwp_gnb_relative {
+  padding: 0 0 0 10px;
+  margin: 0 11px 0 0;
+}
