@@ -1,13 +1,13 @@
-import './App.css';
+import "./App.css";
 import { firestore } from "./Firebase";
-import React, { useEffect, useState, useCallback } from 'react';
-import InfiniteScroll from 'react-infinite-scroll-component';
-import { Button, Input, Space, Divider, List, Skeleton } from 'antd';
+import React, { useEffect, useState, useCallback } from "react";
+import InfiniteScroll from "react-infinite-scroll-component";
+import { Button, Input, Space, Divider, List, Skeleton, Avatar } from "antd";
 
 function App() {
-
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState([]);
+  const [input, setInput] = useState("");
 
   const loadMoreData = () => {
     /*if (loading) {
@@ -30,28 +30,32 @@ function App() {
     let firebaseData = [];
 
     firestore
-    .collection("TBAI")
-    .orderBy('order', 'asc')
-    .get() // collection 하위 모든 document
-    .then((docs) => {
-      // forEach 함수로 각각의 다큐먼트에 함수 실행
-      docs.forEach((doc) => {
+      .collection("TBAI")
+      .orderBy("order", "asc")
+      .get() // collection 하위 모든 document
+      .then((docs) => {
+        // forEach 함수로 각각의 다큐먼트에 함수 실행
+        docs.forEach((doc) => {
+          let docData = doc.data();
 
-        let docData = doc.data();
+          firebaseData.push({
+            user: docData.user,
+            type: docData.type,
+            message: docData.message,
+            responseType: docData.responseType,
+            id: doc.id,
+            title: docData.type === "request" ? "정주상" : "시크릿 T",
+            avatarSrc:
+              docData.type === "request"
+                ? "../images/profile.png"
+                : "../images/logo.png",
+          });
 
-        firebaseData.push(
-            { user: docData.user,
-              type: docData.type,
-              message: docData.message,
-              responseType: docData.responseType,
-              id: doc.id }
-        );
-
-        console.log(doc.data())
+          console.log(doc.data());
+        });
+        console.log(firebaseData);
+        setData(firebaseData);
       });
-
-      setData(firebaseData);
-    });
   }, []);
 
   useEffect(() => {
@@ -59,49 +63,63 @@ function App() {
     fetchFirebase();
   }, [fetchFirebase]);
 
-  return (
-      <div
-          id="scrollableDiv"
-          style={{
-            height: 400,
-            overflow: 'auto',
-            padding: '0 16px',
-            border: '1px solid rgba(140, 140, 140, 0.35)',
-          }}
-      >
-        <InfiniteScroll
-            dataLength={data.length}
-            next={loadMoreData}
-            loader={
-              <Skeleton
-                  avatar
-                  paragraph={{
-                    rows: 1,
-                  }}
-                  active
-              />
-            }
-            endMessage={<Divider plain>It is all, nothing more 🤐</Divider>}
-            scrollableTarget="scrollableDiv"
-        >
-          <List
-              dataSource={data}
-              renderItem={(item) => (
-                  <List.Item key={null}>
-                    <List.Item.Meta
-                        title={item.type}
-                        description={item.message}
-                    />
-                  </List.Item>
-              )}
-          />
-        </InfiniteScroll>
+  const handleSubmit = async () => {
+    console.log(input);
+    //input 에 들어있는 값을 firestore 에 post
+  };
 
-        <Space.Compact style={{ width: '100%' }}>
-          <Input defaultValue="" />
-          <Button type="primary">Submit</Button>
-        </Space.Compact>
-      </div>
+  return (
+    <div
+      id="scrollableDiv"
+      style={{
+        height: 400,
+        overflow: "auto",
+        padding: "0 16px",
+        border: "1px solid rgba(140, 140, 140, 0.35)",
+      }}
+    >
+      <InfiniteScroll
+        dataLength={data.length}
+        next={loadMoreData}
+        loader={
+          <Skeleton
+            avatar
+            paragraph={{
+              rows: 1,
+            }}
+            active
+          />
+        }
+        endMessage={<Divider plain>It is all, nothing more 🤐</Divider>}
+        scrollableTarget="scrollableDiv"
+      >
+        <div style={{ border: "1px solid" }}>
+          <List
+            dataSource={data}
+            renderItem={(item) => (
+              <List.Item key={item.id}>
+                <List.Item.Meta
+                  avatar={<Avatar src={item.avatarSrc} />}
+                  title={item.title}
+                  description={item.message}
+                />
+              </List.Item>
+            )}
+          />
+        </div>
+      </InfiniteScroll>
+
+      <Space.Compact style={{ width: "100%" }}>
+        <Input
+          defaultValue=""
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+        />
+        <Button type="primary" onClick={handleSubmit}>
+          Submit
+        </Button>
+      </Space.Compact>
+    </div>
   );
 }
 
