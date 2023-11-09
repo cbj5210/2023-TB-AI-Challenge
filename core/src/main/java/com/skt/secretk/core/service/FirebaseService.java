@@ -10,6 +10,8 @@ import com.google.cloud.firestore.QuerySnapshot;
 import com.google.firebase.cloud.FirestoreClient;
 import com.google.firebase.database.annotations.Nullable;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.List;
@@ -71,7 +73,7 @@ public class FirebaseService {
                               db.collection("TBAI").document(documentId).update(updateSolved);
 
                               // TODO : for test, 응답을 추가
-                              String createTime = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss:SSS"));
+                              String createTime = ZonedDateTime.now(ZoneId.of("Asia/Seoul")).format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss:SSS"));
                               Map<String, Object> newData = new HashMap<>();
                               newData.put("user", "1111111");
                               newData.put("type", "response");
