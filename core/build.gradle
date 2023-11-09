@@ -42,13 +42,13 @@ dependencies {
 
 jib {
     from {
-		image = 'openjdk:17-alpine'
+		image = 'amazoncorretto:17'
     }
     to {
         tags = [project.version, 'latest'] as List<String>
     }
     container {
-        jvmFlags = ['-Xlog:gc']
+        jvmFlags = ['-XX:+UseContainerSupport', '-Xms512m', '-Xdebug']
     }
 }
 
