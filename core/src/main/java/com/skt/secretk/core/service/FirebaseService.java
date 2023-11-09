@@ -71,7 +71,7 @@ public class FirebaseService {
                               db.collection("TBAI").document(documentId).update(updateSolved);
 
                               // TODO : for test, 응답을 추가
-                              String createTime = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+                              String createTime = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss:SSS"));
                               Map<String, Object> newData = new HashMap<>();
                               newData.put("user", "1111111");
                               newData.put("type", "response");
