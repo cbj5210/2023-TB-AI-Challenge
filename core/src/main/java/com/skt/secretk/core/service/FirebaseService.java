@@ -9,6 +9,8 @@ import com.google.cloud.firestore.FirestoreException;
 import com.google.cloud.firestore.QuerySnapshot;
 import com.google.firebase.cloud.FirestoreClient;
 import com.google.firebase.database.annotations.Nullable;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -66,10 +68,17 @@ public class FirebaseService {
                               // 기존 request의 solved를 변경
                               Map<String, Object> updateSolved = new HashMap<>(data);
                               updateSolved.put("solved", "true");
-
                               db.collection("TBAI").document(documentId).update(updateSolved);
 
-                              // 응답을 추가
+                              // TODO : for test, 응답을 추가
+                              String createTime = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+                              Map<String, Object> newData = new HashMap<>();
+                              newData.put("user", "1111111");
+                              newData.put("type", "response");
+                              newData.put("message", "지금은 이렇게만 응답 합니다.");
+                              newData.put("responseType", "text");
+                              newData.put("createTime", createTime);
+                              db.collection("TBAI").add(newData);
                           }
                       }
 
