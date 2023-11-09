@@ -2,7 +2,7 @@ import './App.css';
 import { firestore } from "./Firebase";
 import React, { useEffect, useState, useCallback } from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
-import { Avatar, Divider, List, Skeleton } from 'antd';
+import { Button, Input, Space, Divider, List, Skeleton } from 'antd';
 
 function App() {
 
@@ -96,6 +96,11 @@ function App() {
               )}
           />
         </InfiniteScroll>
+
+        <Space.Compact style={{ width: '100%' }}>
+          <Input defaultValue="" />
+          <Button type="primary">Submit</Button>
+        </Space.Compact>
       </div>
   );
 }
