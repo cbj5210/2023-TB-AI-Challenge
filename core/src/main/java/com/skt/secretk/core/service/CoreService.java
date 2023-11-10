@@ -69,24 +69,31 @@ public class CoreService {
 
     private String getEntryMsg(List<String> entitiesMsg, Firebase request) {
         Map<String, String> dataSetMap = Maps.newHashMap(ImmutableMap.of(
-            "근무시간", Employee.findByEmployee(request.getUser()).getName() + "(" +
+            "근무", Employee.findByEmployee(request.getUser()).getName() + "(" +
                 Employee.findByEmployee(request.getUser()).getTeam() + ")님의 근무 시간은 " +
-                Employee.findByEmployee(request.getUser()).getWorkTime() + " 이고" +
+                Employee.findByEmployee(request.getUser()).getWorkTime() + " 이고 " +
                 Employee.findByEmployee(request.getUser()).getOffice() + "에서 근무하고 있습니다.",
             "공지사항", "https://cloud.google.com/natural-language",
-            "T끌","https://github.com/tatsu-lab/stanford_alpaca#authors"
+            "T끌","https://github.com/tatsu-lab/stanford_alpaca#authors",
+            "주차권", "https://naver.me/GeWdImSA"
         ));
 
+        StringBuilder dataSet = new StringBuilder();
         for (String msg: entitiesMsg) {
-            if (dataSetMap.containsKey(msg)) {
-                return dataSetMap.get(msg);
+            if (dataSetMap.containsKey(msg.toUpperCase())) {
+                dataSet.append(dataSetMap.get(msg));
+                dataSet.append("\n");
             }
         }
 
-        return null;
+        if (StringUtils.isNotBlank(dataSet)) {
+            dataSet.deleteCharAt(dataSet.lastIndexOf("\n"));
+        }
+
+        return dataSet.toString();
     }
 
-    public static String validUrl(String msg){
+    public static String validUrl(String msg) {
         try {
             String REGEX = "\\b(https?|ftp|file)://[-a-zA-Z0-9+&@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&@#/%=~_|]";
             Pattern p = Pattern.compile(REGEX, Pattern.CASE_INSENSITIVE);
