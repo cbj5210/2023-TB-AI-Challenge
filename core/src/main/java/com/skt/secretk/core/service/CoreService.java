@@ -5,6 +5,7 @@ import com.google.common.collect.Maps;
 import com.skt.secretk.core.enum_.Employee;
 import com.skt.secretk.core.model.Firebase;
 import com.skt.secretk.core.model.GoogleNlpResult;
+import com.skt.secretk.core.model.SecretTResponse;
 import com.skt.secretk.core.util.StreamUtils;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
@@ -24,7 +25,7 @@ import org.springframework.util.CollectionUtils;
 @RequiredArgsConstructor
 public class CoreService {
     private static final String ALPACA_PREFIX = "요청하신 내용의 답변을 시크릿 T는 찾지 못했어요.. 하지만 친구인 Alpaca가 알려준 답변을 전달 드립니다. ";
-    private static final String EMPTY_MSG = "요청하신 결과가 없습니다.\n다른 질문으로 요청해주세요.";
+    private static final String EMPTY_MSG = "요청하신 결과가 없습니다. 다른 질문으로 요청해주세요.";
 
     private final GcpNlpService gcpNlpService;
     private final AlpacaService alpacaService;
@@ -40,18 +41,14 @@ public class CoreService {
         GoogleNlpResult nlpResult = gcpNlpService.query(message);
 
         // 2. entities 에 해당하는 key 가 있으면 메세지 만들어서 리턴
-        String responseMsg = getEntryMsg(nlpResult, request);
-        if (StringUtils.isNotBlank(responseMsg)) {
-            String responseType = "text";
-            if (responseMsg.startsWith("http")) {
-                responseType = "url";
-            }
+        SecretTResponse responseResult = getEntryMsg(nlpResult, request);
+        if (responseResult != null && StringUtils.isNotBlank(responseResult.getMessage())) {
 
             return Firebase.builder()
                            .user(user)
                            .type("response")
-                           .message(responseMsg)
-                           .responseType(responseType)
+                           .message(responseResult.getMessage())
+                           .responseType(responseResult.getType())
                            .createTime(createTime)
                            .build();
         }
@@ -73,7 +70,7 @@ public class CoreService {
                        .build();
     }
 
-    private String getEntryMsg(GoogleNlpResult nlpResult, Firebase request) {
+    private SecretTResponse getEntryMsg(GoogleNlpResult nlpResult, Firebase request) {
         if (nlpResult == null) {
             return null;
         }
@@ -84,8 +81,9 @@ public class CoreService {
         }
 
         // 사람 지칭이 있는 경우 반복
-        return StreamUtils.ofNullable(nlpResult.getPeopleList())
-                          .map(people -> {
+        String complexTest
+            = StreamUtils.ofNullable(nlpResult.getPeopleList())
+                         .map(people -> {
                               String name = getPeopleName(people);
 
                               Employee employee = Employee.findByName(name);
@@ -96,8 +94,11 @@ public class CoreService {
 
                               return match(nlpResult.getEntityList(), employee);
                           })
-                          .filter(Objects::nonNull)
-                          .collect(Collectors.joining(" "));
+                         .filter(Objects::nonNull)
+                         .map(SecretTResponse::getMessage)
+                         .collect(Collectors.joining(" "));
+
+        return new SecretTResponse(complexTest, "text");
     }
 
     public static String validUrl(String msg) {
@@ -122,14 +123,17 @@ public class CoreService {
         return name;
     }
 
-    private String match(List<String> entityList, Employee employee) {
-        Map<String, String> dataSetMap = Maps.newHashMap(ImmutableMap.of(
-            "근무", employee.getName() + "(" +
+    private SecretTResponse match(List<String> entityList, Employee employee) {
+        Map<String, SecretTResponse> dataSetMap = Maps.newLinkedHashMap(ImmutableMap.of(
+            "캔미팅", new SecretTResponse("캔미팅은 경영 문제 해결과 동적요소 관리의 장으로 활용되는 우리의 SUPEX 추구의 장입니다. 통상적인 근무지를 벗어난 경우에는 표준근로시간(8시간) 근무한 것으로 간주합니다.", "text"),
+            "식당", new SecretTResponse("오늘 구내 식당의 점심 메뉴는 비빔밥, 시래기국, 잡채, 단호박부꾸미, 청포묵김가루무침 입니다. 저녁 메뉴는 육개장, 쌀밥, 완자야채볶음, 메추리알 조림, 유채나물 입니다.", "text"),
+            "근무", new SecretTResponse(employee.getName() + "(" +
                 employee.getTeam() + ")님의 근무 시간은 " +
                 employee.getWorkTime() + " 이고 " +
-                employee.getOffice() + "에서 근무하고 있습니다.",
-            "공지사항", "https://cloud.google.com/natural-language",
-            "T끌","https://github.com/tatsu-lab/stanford_alpaca#authors"
+                employee.getOffice() + "에서 근무하고 있습니다.", "text"),
+            "재직증명서", new SecretTResponse("https://drive.google.com/file/d/17ZCbjv3k43DKRDegDiA8ik-_YT2WZjaN/view?usp=sharing", "file"),
+            "공지사항", new SecretTResponse("https://cloud.google.com/natural-language", "url"),
+            "T끌",new SecretTResponse("https://github.com/tatsu-lab/stanford_alpaca#authors", "url")
         ));
 
         List<String> newEntityList = StreamUtils.ofNullable(entityList)
