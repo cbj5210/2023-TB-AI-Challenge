@@ -107,11 +107,16 @@ function ChatBot() {
     return user ? user.image : "";
   }
 
+  function getFileMessage(item) {
+
+    return <p>파일을 발급해드릴게요 ^^   <a href={item.message} target="_blank">다운로드 받기</a> </p>;
+  }
+
   return (
       <div
           id="scrollableDiv"
           style={{
-            height: 400,
+            height: 1400,
             overflow: "auto",
             padding: "0 16px",
             border: "1px solid rgba(140, 140, 140, 0.35)",
@@ -139,7 +144,7 @@ function ChatBot() {
                     <List.Item.Meta
                         avatar={<Avatar src={item.avatarSrc} />}
                         title={item.title}
-                        description={item.message}
+                        description={item.responseType === "file" ? getFileMessage(item) : item.message}
                     />
                   </List.Item>
               )}
