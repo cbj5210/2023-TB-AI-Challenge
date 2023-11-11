@@ -153,6 +153,12 @@
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); } }
 
+@keyframes blink-effect {
+  50% {
+    opacity: 0;
+  }
+}
+
 .owl-carousel .slideOutUp {
   -webkit-animation-name: slideOutUp;
   -ms-animation-name: slideOutUp;
@@ -6299,3 +6305,6 @@
     background-image: url(../images/main/ico_wpt.png?t=0208);
     background-size: 270px 240px;
     background-color: #999; }
+
+.blink {
+  animation: blink-effect 1s step-end infinite;
