@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ChatBot from "./ChatBot";
 
 function App() {
-
   const RedirectSite1 = () => {
     window.location.href = "/1.html";
     return <></>;
@@ -21,12 +20,12 @@ function App() {
   };
 
   const RedirectSite5 = () => {
-    window.location.href = "/4.html";
+    window.location.href = "/5.html";
     return <></>;
   };
 
   const RedirectSite6 = () => {
-    window.location.href = "/5.html";
+    window.location.href = "/6.html";
     return <></>;
   };
 
