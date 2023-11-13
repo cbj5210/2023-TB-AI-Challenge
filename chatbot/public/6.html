@@ -298,6 +298,30 @@
       .gwp_left_nav.gwp_nav_type02 .gwp_left_nav.nav_con.active img {
         opacity: 1;
       }
+
+      .tooltip {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted black;
+      }
+
+      .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 620px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+
+        /* Position the tooltip */
+        position: absolute;
+        z-index: 1;
+      }
+
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+      }
     </style>
 
     <link rel="stylesheet" type="text/css" href="./css/portal.only.css" />
@@ -10786,7 +10810,23 @@
                   >
                     ####### 시연 영역 #######
                   </p> -->
-                  <span class="demo_title">시크릿 T 시연영역</span>
+                  <span class="demo_title">시크릿 T 시연영역
+                    <div class="tooltip"> (명령어 예시 보기)
+                      <span class="tooltiptext">
+                        <p> 오늘 근무 시간 알려줘 </p>
+                        <br />
+                        <p> 주민범님, 최하혁님, 김영래님 근무 시간 알려줘 </p>
+                        <br />
+                        <p> 오늘 구내식당 메뉴 뭐야? </p>
+                        <br />
+                        <p> 재직 증명서 발급해줘 </p>
+                        <br />
+                        <p> 캔미팅 근무 등록 어떻게 해? </p>
+                        <br />
+                        <p> 오늘 서울 날씨 추워? </p>
+                      </span>
+                    </div>
+                  </span>
                   <br /><br />
                   <iframe
                     src="http://54.180.101.106:3000/6666666"
