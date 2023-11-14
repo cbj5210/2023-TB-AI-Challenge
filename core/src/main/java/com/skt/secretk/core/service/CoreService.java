@@ -131,7 +131,7 @@ public class CoreService {
                 employee.getTeam() + ")님의 근무 시간은 " +
                 employee.getWorkTime() + " 이고 " +
                 employee.getOffice() + "에서 근무하고 있습니다.", "text"),
-            "재직증명서", new SecretTResponse("https://drive.google.com/file/d/17ZCbjv3k43DKRDegDiA8ik-_YT2WZjaN/view?usp=sharing", "file"),
+            "재직증명서", new SecretTResponse("https://cdn-dev.skt-asum.com/cf5eb2ac-0f43-4784-a592-344ad7aa9977.pdf", "file"),
             "공지사항", new SecretTResponse("https://cloud.google.com/natural-language", "url"),
             "T끌",new SecretTResponse("https://github.com/tatsu-lab/stanford_alpaca#authors", "url")
         ));
