@@ -6,7 +6,7 @@
 <br /><br />
 
 # 🖥️ Demo 시연 및 테스트
-  * YOUTUBE URL : xxxx
+  * YOUTUBE URL : https://youtu.be/mHzyYxkBXNw
   * 서비스 Demo
     * http://54.180.101.106:3000/user1 (사용자 1)
     * http://54.180.101.106:3000/user2 (사용자 2)
