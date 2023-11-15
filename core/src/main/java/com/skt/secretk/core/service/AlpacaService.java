@@ -32,7 +32,6 @@ public class AlpacaService {
     }
 
     private KoAlpacaConvResponse callPrepareApi() {
-//        return new KoAlpacaConvResponse("654b2e4f9276fd4020bb33a9", "376cc7e5-41cc-4e5b-ac16-e3fcf5c5cf8b"); //test 용
         return webClient.post()
                         .uri(KO_ALPACA_URL)
                         .contentType(MediaType.APPLICATION_JSON)
