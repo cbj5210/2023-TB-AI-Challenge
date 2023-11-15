@@ -8,8 +8,9 @@ import { Button, Input, Space, Divider, List, Skeleton, Avatar } from "antd";
 function ChatBot() {
   const [data, setData] = useState([]);
   const [input, setInput] = useState("");
-  const bottomEl = useRef(null);
   const { idParam } = useParams();
+
+  /* 사용자 프로필 (사번, 이름, 프로필 이미지) */
   const [userProfile, setUserProfile] = useState([
     { id: "1111111", name: "정주상", image: "../images/1111111.png" },
     { id: "2222222", name: "최병준", image: "../images/2222222.png" },
@@ -18,22 +19,20 @@ function ChatBot() {
     { id: "6666666", name: "김영래", image: "../images/6666666.png" },
   ]);
 
+  const bottomEl = useRef(null);
   const loadMoreData = () => {};
 
   const scrollToBottom = () => {
     bottomEl?.current?.scrollIntoView({ behavior: "auto" });
   };
 
+  // 시크릿 T 와 대화이력이 없는 경우 예시 검색어 제공
   const endMessageSet = [
     "시크릿 T 에게 궁금한 내용을 입력해주세요.",
-    "- 오늘 근무 시간 알려줘",
-    "- 캔미팅 근무 등록은 어떻게 해?",
-    "오늘 구내식당 메뉴 뭐야?",
+    "- 주민범님, 최하혁님, 김영래님 근무 시간 알려줘",
+    "- 캔미팅 근무 등록 어떻게 해?",
+    "- 오늘 구내식당 메뉴 뭐야?",
   ];
-
-  const endMessage = () => {
-    return endMessageSet.join("<br/>");
-  };
 
   useEffect(() => {
     const userId = idParam ? idParam : "1111111";
@@ -61,6 +60,7 @@ function ChatBot() {
       });
   }, []);
 
+  // 시크릿 T 와 대화 이력이 존재하는 경우, 하단으로 스크롤 이동
   useEffect(() => {
     if (data.length > 2) scrollToBottom();
   }, [data]);
@@ -72,6 +72,7 @@ function ChatBot() {
     }
   };
 
+  // 제출 시 사용자 아이디, 날짜, 메시지를 지정하여 firestore 에 저장
   const handleSubmit = async () => {
     const userId = idParam ? idParam : "1111111";
 
@@ -106,13 +107,11 @@ function ChatBot() {
 
   function getUserName(id) {
     const user = userProfile.find((user) => user.id === id);
-
     return user ? user.name : "유저를 찾을 수 없습니다.";
   }
 
   function getUserImage(id) {
     const user = userProfile.find((user) => user.id === id);
-
     return user ? user.image : "";
   }
 
@@ -150,7 +149,8 @@ function ChatBot() {
           />
         }
         endMessage={
-          <Divider plain>
+          <div style={{ textAlign: "center" }}>
+            {" "}
             {data.length !== 0
               ? ""
               : endMessageSet.map((line) => {
@@ -161,7 +161,8 @@ function ChatBot() {
                     </span>
                   );
                 })}
-          </Divider>
+            <Divider plain></Divider>
+          </div>
         }
         scrollableTarget="scrollableDiv"
       >
